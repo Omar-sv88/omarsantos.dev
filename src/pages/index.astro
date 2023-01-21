@@ -7,6 +7,7 @@ import { Icon } from 'astro-icon'
 import { Image } from '@astrojs/image/components'
 import Section from '../components/Section.astro'
 import Rrss from '../components/Rrss.astro'
+import LatestPosts from '../components/LatestPosts.astro'
 
 const abilities = [
 	{
@@ -166,6 +167,19 @@ const abilities = [
 				))
 			}
 		</div>
+	</Section>
+
+	<Section>
+		<header class='mb-12'>
+			<h2 class='font-bold text-3xl text-purple-100'>
+				✍
+				<span class='text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text'>
+					Últimos artículos
+				</span>
+			</h2>
+		</header>
+
+		<LatestPosts />
 	</Section>
 </PageLayout>
 

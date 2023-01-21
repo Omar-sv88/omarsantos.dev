@@ -6,6 +6,7 @@ import PageLayout from '../layouts/PageLayout.astro'
 import { Icon } from 'astro-icon'
 import { Image } from '@astrojs/image/components'
 import Section from '../components/Section.astro'
+import Title from '../components/Title.astro'
 import Rrss from '../components/Rrss.astro'
 import LatestPosts from '../components/LatestPosts.astro'
 
@@ -117,12 +118,7 @@ const abilities = [
 
 	<Section>
 		<header class='mb-12'>
-			<h2 class='font-bold text-3xl'>
-				👨‍💻
-				<span class='text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text'>
-					Sobre mí
-				</span>
-			</h2>
+			<Title icon='👨‍💻' title='Sobre mí' />
 		</header>
 		<div class='content text-lg text-purple-100'>
 			<p>
@@ -143,12 +139,7 @@ const abilities = [
 
 	<Section>
 		<header class='mb-12'>
-			<h2 class='font-bold text-3xl text-purple-100'>
-				💪
-				<span class='text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text'>
-					Mis habilidades
-				</span>
-			</h2>
+			<Title icon='💪' title='Mis habilidades' />
 		</header>
 
 		<div
@@ -171,12 +162,7 @@ const abilities = [
 
 	<Section>
 		<header class='mb-12'>
-			<h2 class='font-bold text-3xl text-purple-100'>
-				✍
-				<span class='text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text'>
-					Últimos artículos
-				</span>
-			</h2>
+			<Title icon='✍' title='Últimos artículos' />
 		</header>
 
 		<LatestPosts />

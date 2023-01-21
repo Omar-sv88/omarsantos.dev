@@ -1,44 +1,13 @@
 ---
-import { Icon } from 'astro-icon'
-
-const rrss = [
-	{
-		name: 'Twitter',
-		url: 'https://twitter.com/omar_sv88',
-		logo: 'twitter'
-	},
-	{
-		name: 'Linkedin',
-		url: 'https://www.linkedin.com/in/omar-sv88/',
-		logo: 'linkedin'
-	},
-	{
-		name: 'Github',
-		url: 'https://github.com/Omar-sv88',
-		logo: 'github'
-	}
-]
+import Rrss from './Rrss.astro'
 ---
 
-<footer class='text-center mt-24 py-4 text-slate-400'>
-	<section class='w-full flex items-center justify-center gap-2 mb-2'>
-		{
-			rrss.map((item) => (
-				<a href={item.url} target='_blank' class='rrss--item'>
-					<Icon pack='mdi' name={item.logo} class='w-6 h-6 transition-colors' />
-				</a>
-			))
-		}
-	</section>
+<footer class='text-center mt-24 py-4 text-purple-100'>
+	<Rrss centered />
+
 	<small
 		>&copy; {new Date().getFullYear()} — Web diseñada y programada por
 		<strong>Omar Santos</strong> usando <strong>Astro</strong> &
 		<strong>Tailwindcss</strong> con &#10084; en <strong>León</strong>.</small
 	>
 </footer>
-
-<style>
-	.rrss--item:hover > svg {
-		@apply text-purple-900;
-	}
-</style>

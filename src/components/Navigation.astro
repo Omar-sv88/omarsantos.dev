@@ -1,19 +1,48 @@
 ---
+const navigation = [
+	{
+		title: 'Artículos',
+		url: '/blog'
+	},
+	{
+		title: 'Contacto',
+		url: 'mailto:contacto@omarsantos.me'
+	}
+]
 ---
 
 <section class='navigation mb-4 py-4 flex items-center justify-between'>
 	<h1 class='text-2xl'>
-		<a href='/' title='Omar Santos' class='text-indigo-500 text-4xl font-semibold'> OS</a>
+		<a
+			href='/'
+			title='Omar Santos'
+			class='text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-4xl font-semibold'
+		>
+			OS</a
+		>
 	</h1>
 
 	<nav>
 		<ul class='flex items-center gap-4'>
-			<li>
-				<a href='/blog' class='text-white'>Artículos</a>
-			</li>
-			<li>
-				<a href='mailto:contacto@omarsantos.me' class='text-white'> Contacto</a>
-			</li>
+			{
+				navigation.map((item) => (
+					<li class='nav-item p-2 rounded hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 transition-colors cursor-pointer'>
+						<a href={item.url} class='text-white'>
+							{item.title}
+						</a>
+					</li>
+				))
+			}
 		</ul>
 	</nav>
 </section>
+
+<script>
+	const navItems = document.querySelectorAll('.nav-item')
+	navItems.forEach((item) => {
+		item.addEventListener('click', () => {
+			const url = item.querySelector('a')?.href
+			window.location.href = url || ''
+		})
+	})
+</script>

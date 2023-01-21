@@ -1,3 +1,24 @@
+::-webkit-scrollbar {
+	width: 0.4rem;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+	border-radius: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #333333;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #b3b3b3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-image: linear-gradient(to right, #6366f1, #a855f7);
+}
+
 p {
 	margin-bottom: 1rem;
 	line-height: 1.5;

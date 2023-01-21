@@ -152,8 +152,8 @@ const abilities = [
 		>
 			{
 				abilities.map((ability) => (
-					<section class='ability-container h-20 p-4 rounded flex items-center gap-4 cursor-default bg-indigo-900 text-slate-300 hover:bg-slate-100 hover:text-slate-800 transition-colors'>
-						<header>
+					<section class='ability-container h-20 p-4 rounded flex items-center gap-4 cursor-default bg-purple-900 text-slate-300'>
+						<header class='bg-purple-800 p-2 rounded shadow'>
 							<Icon name={ability.logo} class='ability w-12 h-12' />
 						</header>
 						<div class='content'>
@@ -191,14 +191,5 @@ const abilities = [
 		.hero img {
 			max-width: 500px;
 		}
-	}
-
-	.ability {
-		filter: grayscale(1);
-		transition: filter 300ms ease;
-	}
-
-	.ability-container:hover .ability {
-		filter: grayscale(0);
 	}
 </style>

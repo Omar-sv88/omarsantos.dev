@@ -24,8 +24,8 @@ const rrss = [
 	<section class='w-full flex items-center justify-center gap-2 mb-2'>
 		{
 			rrss.map((item) => (
-				<a href={item.url} target='_blank' class='rrss--item '>
-					<Icon pack='mdi' name={item.logo} class='w-6 h-6 transition-colors ' />
+				<a href={item.url} target='_blank' class='rrss--item'>
+					<Icon pack='mdi' name={item.logo} class='w-6 h-6 transition-colors' />
 				</a>
 			))
 		}
@@ -39,6 +39,6 @@ const rrss = [
 
 <style>
 	.rrss--item:hover > svg {
-		@apply text-indigo-500;
+		@apply text-purple-900;
 	}
 </style>

@@ -19,7 +19,7 @@ export default defineConfig({
 			changefreq: 'weekly',
 			priority: 0.7,
 			serialize(item) {
-				if (/^\/blog\/*/.test(item.url)) {
+				if (/\/blog\/.+/.test(item.url)) {
 					return {
 						...item,
 						changefreq: 'never',

@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon';
+
+const rrss = [
+	{
+		name: 'Twitter',
+		url: 'https://twitter.com/omar_sv88',
+		logo: 'twitter',
+	},
+	{
+		name: 'Linkedin',
+		url: 'https://www.linkedin.com/in/omar-sv88/',
+		logo: 'linkedin',
+	},
+	{
+		name: 'Github',
+		url: 'https://github.com/Omar-sv88',
+		logo: 'github',
+	},
+];
+
+const defaultClasses = Astro.props.centered
+	? 'w-full flex gap-2 mb-2 justify-center'
+	: 'w-full flex gap-2 mb-2';
+const defaultIconsSize = Astro.props.largeIcons
+	? 'w-8 h-8 transition-colors'
+	: 'w-6 h-6 transition-colors';
+---
+
+<section class={defaultClasses}>
+	{
+		rrss.map((item) => (
+			<a href={item.url} target="_blank" class="rrss--item">
+				<Icon pack="mdi" name={item.logo} class={defaultIconsSize} />
+			</a>
+		))
+	}
+</section>
+
+<style>
+	.rrss--item:hover > svg {
+		@apply text-purple-900;
+	}
+</style>

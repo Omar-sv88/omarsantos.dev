@@ -1,0 +1,37 @@
+{
+  "name": "omarsantos.dev",
+  "description": "https://omarsantos.dev website",
+  "author": "Omar Santos Ventoso",
+  "license": "ISC",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/image": "0.13.0",
+    "@astrojs/tailwind": "3.0.0",
+    "astro": "2.0.2",
+    "astro-icon": "0.8.0",
+    "tailwindcss": "3.2.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.13",
+    "eslint": "8.32.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-astro": "0.23.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-n": "15.6.1",
+    "eslint-plugin-promise": "6.1.1",
+    "postcss": "8.4.21",
+    "prettier": "2.8.3",
+    "prettier-plugin-astro": "0.8.0",
+    "prettier-plugin-tailwindcss": "0.2.2",
+    "standard": "17.0.0"
+  }
+}

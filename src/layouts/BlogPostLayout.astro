@@ -1,28 +1,28 @@
 ---
-import '../styles/global.css'
+import '../styles/global.css';
 
-import Navigation from '../components/Navigation.astro'
-import Footer from '../components/Footer.astro'
-import Post from '../components/Post.astro'
-import Title from '../components/Title.astro'
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Post from '../components/Post.astro';
+import Title from '../components/Title.astro';
 
-const { frontmatter } = Astro.props
+const { frontmatter } = Astro.props;
 ---
 
-<html lang='en'>
+<html lang="en">
 	<head>
-		<meta charset='utf-8' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<meta name='viewport' content='width=device-width' />
-		<meta name='generator' content={Astro.generator} />
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
 		<title>Omar Santos - Full Stack Developer</title>
 	</head>
-	<body class='is-post bg-black'>
-		<main class='mx-auto px-4 md:max-w-5xl'>
+	<body class="is-post bg-black">
+		<main class="mx-auto px-4 md:max-w-5xl">
 			<Navigation />
 
 			<Post>
-				<header class='mb-8'>
+				<header class="mb-8">
 					<Title title={frontmatter.title} />
 					<small>
 						📅 {
@@ -32,7 +32,7 @@ const { frontmatter } = Astro.props
 						}
 					</small>
 
-					<img class='mx-auto mt-8 rounded' src={frontmatter.image} alt={frontmatter.title} />
+					<img class="mx-auto mt-8 rounded" src={frontmatter.image} alt={frontmatter.title} />
 				</header>
 
 				<slot />

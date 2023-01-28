@@ -1,114 +1,116 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro'
+import PageLayout from '../layouts/PageLayout.astro';
 
-import { Icon } from 'astro-icon'
-import { Image } from '@astrojs/image/components'
-import Section from '../components/Section.astro'
-import Title from '../components/Title.astro'
-import Rrss from '../components/Rrss.astro'
-import LatestPosts from '../components/LatestPosts.astro'
+import { Icon } from 'astro-icon';
+import { Image } from '@astrojs/image/components';
+import Section from '../components/Section.astro';
+import Title from '../components/Title.astro';
+import Rrss from '../components/Rrss.astro';
+import LatestPosts from '../components/LatestPosts.astro';
 
 const abilities = [
 	{
 		name: 'HTML',
 		years: 7,
-		logo: 'html'
+		logo: 'html',
 	},
 	{
 		name: 'CSS',
 		years: 7,
-		logo: 'css'
+		logo: 'css',
 	},
 	{
 		name: 'JavaScript',
 		years: 6,
-		logo: 'javascript'
+		logo: 'javascript',
 	},
 	{
 		name: 'PHP',
 		years: 5,
-		logo: 'php'
+		logo: 'php',
 	},
 	{
 		name: 'MySQL',
 		years: 5,
-		logo: 'mysql'
+		logo: 'mysql',
 	},
 	{
 		name: 'Angular',
 		years: 4,
-		logo: 'angular'
+		logo: 'angular',
 	},
 	{
 		name: 'Vue.js',
 		years: 4,
-		logo: 'vuejs'
+		logo: 'vuejs',
 	},
 	{
 		name: 'TypeScript',
 		years: 4,
-		logo: 'typescript'
+		logo: 'typescript',
 	},
 	{
 		name: 'Sass',
 		years: 4,
-		logo: 'sass'
+		logo: 'sass',
 	},
 	{
 		name: 'Node.js',
 		years: 4,
-		logo: 'nodejs'
+		logo: 'nodejs',
 	},
 	{
 		name: 'git',
 		years: 3,
-		logo: 'git'
+		logo: 'git',
 	},
 	{
 		name: 'SQL',
 		years: 3,
-		logo: 'sql'
+		logo: 'sql',
 	},
 	{
 		name: 'Visual Basic',
 		years: 2,
-		logo: 'visualbasic'
+		logo: 'visualbasic',
 	},
 	{
 		name: 'Ionic',
 		years: 2,
-		logo: 'ionic'
-	}
-]
+		logo: 'ionic',
+	},
+];
 ---
 
 <PageLayout>
-	<section class='hero mb-20 w-full bg-black lg:mb-4'>
-		<div class='container mx-auto px-8 lg:relative'>
-			<header class='flex items-center justify-center lg:justify-end'>
+	<section class="hero mb-20 w-full bg-black lg:mb-4">
+		<div class="container mx-auto px-8 lg:relative">
+			<header class="flex items-center justify-center lg:justify-end">
 				<Image
 					src={'/assets/images/omar_santos.jpg'}
-					alt='Omar Santos - Full Stack Developer'
+					alt="Omar Santos - Full Stack Developer"
 					width={400}
 					height={642}
 					aspectRatio={500 / 803}
-					format='jpeg'
+					format="jpeg"
 					quality={80}
-					class='rounded-xl'
+					class="rounded-xl"
 				/>
 			</header>
 
 			<div
-				class='about-me relative mx-auto rounded bg-gray-100 py-4 px-8 text-2xl shadow-md lg:absolute'
+				class="about-me relative mx-auto rounded bg-gray-100 py-4 px-8 text-2xl shadow-md lg:absolute"
 			>
-				<p class='mb-0 text-2xl md:text-3xl'>
-					Hola, me llamo <strong
-						class='bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent'
-						>Omar Santos</strong
+				<p class="mb-0 text-2xl md:text-3xl">
+					Hola, me llamo
+					<strong
+						class="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
 					>
+						Omar Santos
+					</strong>
 				</p>
-				<p class='text-2xl md:text-3xl'>
-					y soy <strong class='font-semibold'>Full Stack Developer</strong>
+				<p class="text-2xl md:text-3xl">
+					y soy <strong class="font-semibold">Full Stack Developer</strong>
 				</p>
 
 				<Rrss largeIcons />
@@ -117,13 +119,18 @@ const abilities = [
 	</section>
 
 	<Section>
-		<header class='mb-12'>
-			<Title icon='👨‍💻' title='Sobre mí' />
+		<header class="mb-12">
+			<Title icon="👨‍💻" title="Sobre mí" />
 		</header>
-		<div class='content text-lg text-purple-100'>
+		<div class="content text-lg text-purple-100">
 			<p>
 				Soy un <strong>desarrollador web con más de 7 años de experiencia</strong> trabajando para diferentes
-				empresas. Me considero una persona muy implicada y con capacidad para detectar y solucionar problemas.
+				empresas. Actualmente trabajo como
+				<strong>Full Stack Developer</strong> en
+				<a href="https://sngular.com" target="_blank">Sngular</a>.
+			</p>
+			<p>
+				Me considero una persona muy implicada y con capacidad para detectar y solucionar problemas.
 				<strong>Apasionado por el desarrollo web y la tecnología</strong>.
 			</p>
 			<p>
@@ -131,26 +138,28 @@ const abilities = [
 				y probando las últimas tecnologías.
 			</p>
 			<p>
-				También hago mis pinitos como <strong>músico en mi tiempo libre</strong>. Soy un <strong>friki</strong> apasionado por <strong>Marvel</strong>,
-				<strong>DC</strong>, los buenos juegos de aventura gráfica y el <strong>desarrollo personal</strong>.
+				También hago mis pinitos como <strong>músico en mi tiempo libre</strong>. Soy un
+				<strong>friki</strong> apasionado por <strong>Marvel</strong>,
+				<strong>DC</strong>, los buenos juegos de aventura gráfica y el
+				<strong>desarrollo personal</strong>.
 			</p>
 		</div>
 	</Section>
 
 	<Section>
-		<header class='mb-12'>
-			<Title icon='💪' title='Mis habilidades' />
+		<header class="mb-12">
+			<Title icon="💪" title="Mis habilidades" />
 		</header>
 
-		<div class='content grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
+		<div class="content grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
 			{
 				abilities.map((ability) => (
-					<section class='ability-container flex h-20 cursor-default items-center gap-4 rounded bg-purple-900 p-4 text-slate-300'>
-						<header class='rounded bg-purple-800 p-2 shadow'>
-							<Icon name={ability.logo} class='ability h-12 w-12' />
+					<section class="ability-container flex h-20 cursor-default items-center gap-4 rounded bg-purple-900 p-4 text-slate-300">
+						<header class="rounded bg-purple-800 p-2 shadow">
+							<Icon name={ability.logo} class="ability h-12 w-12" />
 						</header>
-						<div class='content'>
-							<h4 class='text-sm font-semibold'>{ability.name}</h4>
+						<div class="content">
+							<h4 class="text-sm font-semibold">{ability.name}</h4>
 						</div>
 					</section>
 				))
@@ -159,8 +168,8 @@ const abilities = [
 	</Section>
 
 	<Section>
-		<header class='mb-12'>
-			<Title icon='✍' title='Últimos artículos' />
+		<header class="mb-12">
+			<Title icon="✍" title="Últimos artículos" />
 		</header>
 
 		<LatestPosts />

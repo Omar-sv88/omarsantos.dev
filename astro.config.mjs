@@ -18,7 +18,17 @@ export default defineConfig({
 		sitemap({
 			changefreq: 'weekly',
 			priority: 0.7,
-			lastmod: new Date()
+			serialize(item) {
+				if (/^\/blog\/*/.test(item.url)) {
+					return {
+						...item,
+						changefreq: 'never',
+						priority: 0.5
+					}
+				}
+
+				return item
+			}
 		})
 	]
 })

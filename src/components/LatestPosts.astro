@@ -1,13 +1,13 @@
 ---
 const allPosts = await Astro.glob('../pages/blog/*.md')
 const max = Astro.props.max || 5
+const posts = max === 0 ? allPosts : allPosts.slice(0, max)
 ---
 
 <ul class='flex items-center gap-4'>
 	{
-		allPosts
+		posts
 			.sort((a, b) => Date.parse(b.frontmatter.createdAt) - Date.parse(a.frontmatter.createdAt))
-			.slice(0, max)
 			.map((post) => (
 				<li class='group w-2/6 transition-transform hover:scale-105'>
 					<a class='relative w-full text-white' href={post.url}>

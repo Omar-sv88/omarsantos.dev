@@ -3,15 +3,22 @@ const allPosts = await Astro.glob('../pages/blog/*.md')
 const max = Astro.props.max || 5
 ---
 
-<ul>
+<ul class='flex items-center gap-4'>
 	{
 		allPosts
 			.sort((a, b) => Date.parse(b.frontmatter.createdAt) - Date.parse(a.frontmatter.createdAt))
 			.slice(0, max)
 			.map((post) => (
-				<li>
-					<a class='text-white' href={post.url}>
-						{post.frontmatter.title}
+				<li class='group w-2/6 transition-transform hover:scale-105'>
+					<a class='relative w-full text-white' href={post.url}>
+						<img
+							class='aspect-video h-auto w-full rounded opacity-70 transition-opacity group-hover:opacity-90'
+							src={post.frontmatter.image}
+							alt={post.frontmatter.title}
+						/>
+						<span class='absolute top-2/4 left-2/4 w-3/4 translate-x-[-50%] translate-y-[-50%] rounded bg-purple-100 bg-opacity-90 p-2 font-semibold text-purple-700 shadow'>
+							{post.frontmatter.title}
+						</span>
 					</a>
 				</li>
 			))

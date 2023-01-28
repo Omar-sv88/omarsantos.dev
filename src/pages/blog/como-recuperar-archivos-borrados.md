@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPostLayout.astro
 title: Cómo recuperar archivos borrados en git
 description: '¿Alguna vez no te ha pasado que has borrado un archivo y lo has commiteado, guardandolo tambien en el servidor remoto por error?'
 extract: '¿Alguna vez no te ha pasado que has borrado un archivo y lo has commiteado, guardandolo tambien en el servidor remoto por error?'
-image: 'como-recuperar-archivos-borrados.jpg'
+image: '/assets/images/posts/como-recuperar-archivos-borrados.jpg'
 category: 'git'
 createdAt: 2022-06-29
 slug: como-recuperar-archivos-borrados

@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPostLayout.astro
 title: Novedades ECMAScript® 2022
 description: Descubre todas las novedades de la nueva especificación para javascript ECMAScript® 2022
 extract: Descubre todas las novedades de la nueva especificación para javascript ECMAScript® 2022
-image: 'novedades-ecmascript-2022.jpg'
+image: '/assets/images/posts/novedades-ecmascript-2022.jpg'
 category: 'javascript'
 createdAt: 2022-07-01
 slug: novedades-ecmascript-2022

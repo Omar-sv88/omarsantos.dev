@@ -1,5 +1,13 @@
 ---
+import LatestPosts from '../components/LatestPosts.astro'
+import Title from '../components/Title.astro'
 import BlogLayout from '../layouts/BlogLayout.astro'
 ---
 
-<BlogLayout />
+<BlogLayout>
+	<header class='mb-12'>
+		<Title icon='✍' title='Artículos' />
+	</header>
+
+	<LatestPosts max={0} />
+</BlogLayout>

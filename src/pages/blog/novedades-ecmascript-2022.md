@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
+layout: ../../layouts/BlogLayout.astro
 title: Novedades ECMAScript® 2022
 description: Descubre todas las novedades de la nueva especificación para javascript ECMAScript® 2022
 extract: Descubre todas las novedades de la nueva especificación para javascript ECMAScript® 2022
@@ -25,17 +25,17 @@ Para declarar una propiedad estática solo tenemos que poner _static_ delante de
 
 ```js
 class MiClaseJS {
-  #propiedadPrivada = 'Esta es una propiedad privada'
-  propiedadPublica = 'Esta es una propiedad pública'
-  static #propiedadEstaticaPrivara = 'Esta es una propiedad estática privada'
-  static propiedadEstaticaPublica = 'Esta es una propiedad estática pública'
+	#propiedadPrivada = 'Esta es una propiedad privada'
+	propiedadPublica = 'Esta es una propiedad pública'
+	static #propiedadEstaticaPrivara = 'Esta es una propiedad estática privada'
+	static propiedadEstaticaPublica = 'Esta es una propiedad estática pública'
 
-  #metodoPrivado() {}
+	#metodoPrivado() {}
 
-  metodoPublico() {}
+	metodoPublico() {}
 
-  static #metodoEstaticoPrivado() {}
-  static metodoEstaticoPublico() {}
+	static #metodoEstaticoPrivado() {}
+	static metodoEstaticoPublico() {}
 }
 ```
 
@@ -46,7 +46,7 @@ Hasta ahora solo se podía usar _await_ en el scope de una función. Con la nuev
 ```js
 /* Antes*/
 async function getWeb() {
-  return await fetch('https://omarsantos.me')
+	return await fetch('https://omarsantos.me')
 }
 
 /* Ahora */
@@ -77,8 +77,8 @@ Este nuevo método provee una nueva forma segura y siempre accesible que permite
 
 ```js
 const persona = {
-  nombre: 'Omar',
-  pais: 'España'
+	nombre: 'Omar',
+	pais: 'España'
 }
 
 console.log(Object.hasOwn(persona, 'pais')) // true

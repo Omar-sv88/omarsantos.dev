@@ -4,12 +4,12 @@ const max = Astro.props.max || 5
 const posts = max === 0 ? allPosts : allPosts.slice(0, max)
 ---
 
-<ul class='flex items-center gap-4'>
+<ul class='flex flex-wrap items-center gap-4 sm:flex-nowrap'>
 	{
 		posts
 			.sort((a, b) => Date.parse(b.frontmatter.createdAt) - Date.parse(a.frontmatter.createdAt))
 			.map((post) => (
-				<li class='group w-2/6 transition-transform hover:scale-105'>
+				<li class='group w-full transition-transform hover:scale-105 sm:w-2/4 md:w-2/6'>
 					<a class='relative w-full text-white' href={post.url}>
 						<img
 							class='aspect-video h-auto w-full rounded opacity-70 transition-opacity group-hover:opacity-90'

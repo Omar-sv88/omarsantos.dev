@@ -12,5 +12,13 @@ import sitemap from '@astrojs/sitemap'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://omarsantos.dev',
-	integrations: [tailwind(), image(), sitemap()]
+	integrations: [
+		tailwind(),
+		image(),
+		sitemap({
+			changefreq: 'weekly',
+			priority: 0.7,
+			lastmod: new Date()
+		})
+	]
 })

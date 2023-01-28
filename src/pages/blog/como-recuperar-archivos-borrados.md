@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: Cómo recuperar archivos borrados en git
 description: '¿Alguna vez no te ha pasado que has borrado un archivo y lo has commiteado, guardandolo tambien en el servidor remoto por error?'
 extract: '¿Alguna vez no te ha pasado que has borrado un archivo y lo has commiteado, guardandolo tambien en el servidor remoto por error?'

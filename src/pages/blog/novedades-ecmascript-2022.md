@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: Novedades ECMAScript® 2022
 description: Descubre todas las novedades de la nueva especificación para javascript ECMAScript® 2022
 extract: Descubre todas las novedades de la nueva especificación para javascript ECMAScript® 2022

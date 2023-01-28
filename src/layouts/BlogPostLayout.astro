@@ -3,6 +3,7 @@ import '../styles/global.css'
 
 import Navigation from '../components/Navigation.astro'
 import Footer from '../components/Footer.astro'
+import Post from '../components/Post.astro'
 ---
 
 <html lang='en'>
@@ -13,11 +14,13 @@ import Footer from '../components/Footer.astro'
 		<meta name='generator' content={Astro.generator} />
 		<title>Omar Santos - Full Stack Developer</title>
 	</head>
-	<body class='bg-black'>
+	<body class='is-post bg-black'>
 		<main class='mx-auto px-4 md:max-w-5xl'>
 			<Navigation />
 
-			<slot />
+			<Post>
+				<slot />
+			</Post>
 
 			<Footer />
 		</main>

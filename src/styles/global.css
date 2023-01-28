@@ -15,7 +15,29 @@
 	background-image: linear-gradient(to right, #6366f1, #a855f7);
 }
 
-p {
+p,
+.is-post li {
+	font-size: 1.2rem;
 	margin-bottom: 1rem;
 	line-height: 1.5;
+}
+
+.is-post pre {
+	@apply my-8 rounded p-4;
+}
+
+.is-post h4 {
+	@apply mt-8 mb-4 text-xl font-bold;
+}
+
+.is-post ol {
+	@apply list-inside list-decimal;
+}
+
+.is-post ul {
+	@apply list-inside list-disc;
+}
+
+.is-post li {
+	@apply mb-2;
 }

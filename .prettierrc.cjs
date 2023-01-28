@@ -1,4 +1,8 @@
 module.exports = {
+	plugins: [
+		require.resolve('prettier-plugin-astro'),
+		require.resolve('prettier-plugin-tailwindcss')
+	],
 	printWidth: 100,
 	semi: false,
 	singleQuote: true,
@@ -10,14 +14,22 @@ module.exports = {
 		{
 			files: ['*.json', '*.md', '*.toml', '*.yml'],
 			options: {
-				useTabs: false,
-			},
-		},
+				useTabs: false
+			}
+		}
+	],
+	overrides: [
+		{
+			files: '*.astro',
+			options: {
+				parser: 'astro'
+			}
+		}
 	],
 	endOfLine: 'lf',
 	bracketSpacing: true,
 	quoteProps: 'as-needed',
 	arrowParens: 'always',
 	htmlWhitespaceSensitivity: 'css',
-	jsxBracketSameLine: false,
+	jsxBracketSameLine: false
 }

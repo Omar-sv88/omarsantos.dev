@@ -1,17 +1,48 @@
 ---
-import '../styles/global.css';
+import '../styles/global.css'
 
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro'
+import Footer from '../components/Footer.astro'
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Omar Santos - Full Stack Developer</title>
+		<meta name="description" content="Omar Santos - Full Stack Developer" />
+		<meta name="author" content="Omar Santos" />
+		<meta
+			name="keywords"
+			content="Omar Santos, Full Stack Developer, Web Developer, JavaScript, React, Node, Astro"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow" />
+		<meta name="google" content="nositelinkssearchbox" />
+		<meta name="google" content="notranslate" />
+
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Omar Santos - Full Stack Developer" />
+		<meta property="og:description" content="Omar Santos - Full Stack Developer" />
+		<meta property="og:url" content="https://omarsantos.dev" />
+		<meta property="og:site_name" content="Omar Santos - Full Stack Developer" />
+		<meta property="og:image" content={`${Astro.site}assets/images/omarsantos.dev-og-image.jpg`} />
+		<meta
+			property="og:image:secure_url"
+			content={`${Astro.site}assets/images/omarsantos.dev-og-image.jpg`}
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:description" content="Omar Santos - Full Stack Developer" />
+		<meta name="twitter:title" content="Omar Santos - Full Stack Developer" />
+		<meta name="twitter:image" content={`${Astro.site}assets/images/omarsantos.dev-og-image.jpg`} />
+		<meta name="twitter:site" content="@omar_sv88" />
+		<meta name="twitter:creator" content="@omar_sv88" />
 	</head>
 	<body class="bg-black">
 		<main class="mx-auto px-4 md:max-w-5xl">

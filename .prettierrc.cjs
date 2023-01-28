@@ -1,12 +1,15 @@
 module.exports = {
 	printWidth: 100,
-	semi: true,
+	semi: false,
 	singleQuote: true,
 	tabWidth: 2,
-	trailingComma: 'es5',
+	trailingComma: 'none',
 	useTabs: true,
 	endOfLine: 'lf',
-	plugins: [require.resolve('prettier-plugin-astro'), require.resolve('prettier-plugin-tailwindcss')],
+	plugins: [
+		require.resolve('prettier-plugin-astro'),
+		require.resolve('prettier-plugin-tailwindcss'),
+	],
 	overrides: [
 		{
 			files: ['*.json', '*.md', '*.toml', '*.yml'],
@@ -21,4 +24,4 @@ module.exports = {
 			},
 		},
 	],
-};
+}

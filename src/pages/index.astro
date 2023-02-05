@@ -1,100 +1,94 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import PageLayout from '../layouts/PageLayout.astro'
 
-import { Icon } from 'astro-icon';
-import { Image } from '@astrojs/image/components';
-import Section from '../components/Section.astro';
-import Title from '../components/Title.astro';
-import Rrss from '../components/Rrss.astro';
-import LatestPosts from '../components/LatestPosts.astro';
+import { Icon } from 'astro-icon'
+import Section from '../components/Section.astro'
+import Title from '../components/Title.astro'
+import Rrss from '../components/Rrss.astro'
+import LatestPosts from '../components/LatestPosts.astro'
 
 const abilities = [
 	{
 		name: 'HTML',
 		years: 7,
-		logo: 'html',
+		logo: 'html'
 	},
 	{
 		name: 'CSS',
 		years: 7,
-		logo: 'css',
+		logo: 'css'
 	},
 	{
 		name: 'JavaScript',
 		years: 6,
-		logo: 'javascript',
+		logo: 'javascript'
 	},
 	{
 		name: 'PHP',
 		years: 5,
-		logo: 'php',
+		logo: 'php'
 	},
 	{
 		name: 'MySQL',
 		years: 5,
-		logo: 'mysql',
+		logo: 'mysql'
 	},
 	{
 		name: 'Angular',
 		years: 4,
-		logo: 'angular',
+		logo: 'angular'
 	},
 	{
 		name: 'Vue.js',
 		years: 4,
-		logo: 'vuejs',
+		logo: 'vuejs'
 	},
 	{
 		name: 'TypeScript',
 		years: 4,
-		logo: 'typescript',
+		logo: 'typescript'
 	},
 	{
 		name: 'Sass',
 		years: 4,
-		logo: 'sass',
+		logo: 'sass'
 	},
 	{
 		name: 'Node.js',
 		years: 4,
-		logo: 'nodejs',
+		logo: 'nodejs'
 	},
 	{
 		name: 'git',
 		years: 3,
-		logo: 'git',
+		logo: 'git'
 	},
 	{
 		name: 'SQL',
 		years: 3,
-		logo: 'sql',
+		logo: 'sql'
 	},
 	{
 		name: 'Visual Basic',
 		years: 2,
-		logo: 'visualbasic',
+		logo: 'visualbasic'
 	},
 	{
 		name: 'Ionic',
 		years: 2,
-		logo: 'ionic',
-	},
-];
+		logo: 'ionic'
+	}
+]
 ---
 
 <PageLayout>
 	<section class="hero mb-20 w-full bg-black lg:mb-4">
 		<div class="container mx-auto px-8 lg:relative">
 			<header class="flex items-center justify-center lg:justify-end">
-				<Image
+				<img
+					class="rounded-xl"
 					src={'/assets/images/omar_santos.jpg'}
 					alt="Omar Santos - Full Stack Developer"
-					width={400}
-					height={642}
-					aspectRatio={500 / 803}
-					format="jpeg"
-					quality={80}
-					class="rounded-xl"
 				/>
 			</header>
 

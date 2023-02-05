@@ -10,6 +10,9 @@ import image from '@astrojs/image'
 import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
+import frontendistahtmlMinify from '@frontendista/astro-html-minify'
+
+// https://astro.build/config
 export default defineConfig({
 	site: 'https://omarsantos.dev',
 	integrations: [
@@ -26,9 +29,9 @@ export default defineConfig({
 						priority: 0.5
 					}
 				}
-
 				return item
 			}
-		})
+		}),
+		frontendistahtmlMinify()
 	]
 })

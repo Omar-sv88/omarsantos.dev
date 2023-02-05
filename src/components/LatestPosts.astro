@@ -1,7 +1,7 @@
 ---
-const allPosts = await Astro.glob('../pages/blog/*.md');
-const max = Astro.props.max || 5;
-const posts = max === 0 ? allPosts : allPosts.slice(0, max);
+const allPosts = await Astro.glob('../pages/blog/*.md')
+const max = Astro.props.max || 5
+const posts = max === 0 ? allPosts : allPosts.slice(0, max)
 ---
 
 <ul class="flex flex-wrap items-center gap-4 sm:flex-nowrap">
@@ -10,17 +10,20 @@ const posts = max === 0 ? allPosts : allPosts.slice(0, max);
 			.sort((a, b) => Date.parse(b.frontmatter.createdAt) - Date.parse(a.frontmatter.createdAt))
 			.map((post) => (
 				<li class="group w-full transition-transform hover:scale-105 sm:w-2/4 md:w-2/6">
-					<a class="relative w-full text-white" href={post.url}>
+					<a
+						class="flex flex-col gap-4 rounded p-4 text-purple-100 transition-colors group-hover:bg-purple-900 group-hover:bg-opacity-90"
+						href={post.url}
+					>
 						<img
 							class="aspect-video h-auto w-full rounded opacity-70 transition-opacity group-hover:opacity-90"
 							src={post.frontmatter.image}
 							alt={post.frontmatter.title}
 						/>
-						<span class="absolute top-2/4 left-2/4 w-5/6 translate-x-[-50%] translate-y-[-50%] rounded bg-purple-100 bg-opacity-90 p-2 shadow">
-							<span class="text-xl font-semibold text-purple-700">
+						<span class="w-5/6">
+							<span class="text-xl font-semibold transition-colors group-hover:text-white">
 								{post.frontmatter.title}
 
-								<small class="mt-2 block text-xs text-neutral-800">
+								<small class="mt-2 block text-xs text-neutral-400">
 									📅{' '}
 									{new Intl.DateTimeFormat('es-ES', { dateStyle: 'long' }).format(
 										new Date(post.frontmatter.createdAt)

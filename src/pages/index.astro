@@ -1,84 +1,11 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro'
 
-import { Icon } from 'astro-icon'
 import Section from '../components/Section.astro'
 import Title from '../components/Title.astro'
 import Rrss from '../components/Rrss.astro'
 import LatestPosts from '../components/LatestPosts.astro'
-
-const abilities = [
-	{
-		name: 'HTML',
-		years: 7,
-		logo: 'html'
-	},
-	{
-		name: 'CSS',
-		years: 7,
-		logo: 'css'
-	},
-	{
-		name: 'JavaScript',
-		years: 6,
-		logo: 'javascript'
-	},
-	{
-		name: 'PHP',
-		years: 5,
-		logo: 'php'
-	},
-	{
-		name: 'MySQL',
-		years: 5,
-		logo: 'mysql'
-	},
-	{
-		name: 'Angular',
-		years: 4,
-		logo: 'angular'
-	},
-	{
-		name: 'Vue.js',
-		years: 4,
-		logo: 'vuejs'
-	},
-	{
-		name: 'TypeScript',
-		years: 4,
-		logo: 'typescript'
-	},
-	{
-		name: 'Sass',
-		years: 4,
-		logo: 'sass'
-	},
-	{
-		name: 'Node.js',
-		years: 4,
-		logo: 'nodejs'
-	},
-	{
-		name: 'git',
-		years: 3,
-		logo: 'git'
-	},
-	{
-		name: 'SQL',
-		years: 3,
-		logo: 'sql'
-	},
-	{
-		name: 'Visual Basic',
-		years: 2,
-		logo: 'visualbasic'
-	},
-	{
-		name: 'Ionic',
-		years: 2,
-		logo: 'ionic'
-	}
-]
+import Skills from '../components/Skills.astro'
 ---
 
 <PageLayout>
@@ -149,20 +76,7 @@ const abilities = [
 			<Title icon="💪" title="Mis habilidades" />
 		</header>
 
-		<div class="content grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-			{
-				abilities.map((ability) => (
-					<section class="ability-container flex h-20 cursor-default items-center gap-4 rounded bg-purple-900 p-4 text-slate-300">
-						<header class="rounded bg-purple-800 p-2 shadow">
-							<Icon name={ability.logo} class="ability h-12 w-12" />
-						</header>
-						<div class="content">
-							<h4 class="text-sm font-semibold">{ability.name}</h4>
-						</div>
-					</section>
-				))
-			}
-		</div>
+		<Skills />
 	</Section>
 
 	<Section>

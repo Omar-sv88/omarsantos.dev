@@ -17,6 +17,7 @@ const { frontmatter: post } = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{post.title} Omar Santos - Full Stack Developer</title>
 
+		<link rel="canonical" href={`${Astro.site}${post.url.slice(1)}`} />
 		<SeoSection
 			title={post.title}
 			description={post.description}

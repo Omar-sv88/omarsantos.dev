@@ -41,3 +41,11 @@ p,
 .is-post li {
 	@apply mb-2;
 }
+
+.is-post b {
+	@apply font-bold;
+}
+
+.is-post a {
+	@apply text-purple-400;
+}

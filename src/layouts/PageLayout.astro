@@ -13,6 +13,7 @@ import Footer from '../components/Footer.astro'
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Omar Santos - Full Stack Developer</title>
+		<link rel="canonical" href={`${Astro.site}`} />
 
 		<SeoSection
 			title="Omar Santos - Full Stack Developer"
@@ -23,6 +24,7 @@ import Footer from '../components/Footer.astro'
 			imageUrl={`${Astro.site}assets/images/omarsantos.dev-og-image.jpg`}
 			imageWidth="516"
 			imageHeight="430"
+			url={Astro.site}
 		/>
 	</head>
 	<body class="bg-black">

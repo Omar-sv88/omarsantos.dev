@@ -46,6 +46,6 @@ p,
 	@apply font-bold;
 }
 
-.is-post a {
+.post .is-post a {
 	@apply text-purple-400;
 }

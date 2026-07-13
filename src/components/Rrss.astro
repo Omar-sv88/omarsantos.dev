@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 
 const rrss = [
 	{
@@ -31,7 +31,7 @@ const defaultIconsSize = Astro.props.largeIcons
 	{
 		rrss.map((item) => (
 			<a href={item.url} target="_blank" class="rrss--item">
-				<Icon pack="mdi" name={item.logo} class={defaultIconsSize} />
+					<Icon name={`mdi:${item.logo}`} class={defaultIconsSize} />
 			</a>
 		))
 	}
@@ -39,6 +39,6 @@ const defaultIconsSize = Astro.props.largeIcons
 
 <style>
 	.rrss--item:hover > svg {
-		@apply text-purple-900;
+		color: #581c87;
 	}
 </style>

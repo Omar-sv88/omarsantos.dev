@@ -1,5 +1,5 @@
 ---
-const allPosts = await Astro.glob('../pages/blog/*.md')
+const allPosts = Object.values(import.meta.glob('../pages/blog/*.md', { eager: true }))
 const max = Astro.props.max || 5
 const posts = max === 0 ? allPosts : allPosts.slice(0, max)
 ---

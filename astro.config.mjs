@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config'
-
-// https://astro.build/config
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite'
+import icon from 'astro-icon'
 
 // https://astro.build/config
 import sitemap from '@astrojs/sitemap'
@@ -9,8 +8,11 @@ import sitemap from '@astrojs/sitemap'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://omarsantos.dev',
+	vite: {
+		plugins: [tailwindcss()]
+	},
 	integrations: [
-		tailwind(),
+		icon(),
 		sitemap({
 			changefreq: 'weekly',
 			priority: 0.7,
